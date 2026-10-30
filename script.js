@@ -89,7 +89,9 @@ function spiralCoordinates(n, direction, corner) {
 // グリッドを文字列に変換
 function gridText(grid) {
   return grid
-    .map(row => row.map(ch => displayChar(ch || "") || "　").join(" "))
+    .map(row =>
+      row.map(ch => ch || "　").join(" ")
+    )
     .join("\n");
 }
 
