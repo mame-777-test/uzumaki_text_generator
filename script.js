@@ -37,8 +37,16 @@ function spiralCoordinates(n, direction, corner) {
 }
 
 function cleanChars(text) {
-  return Array.from($("removeSpaces").checked ? text.replace(/\\s/gu,"") : text);
+  // 改行を一旦特別な文字として保持する
+  const normalized = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
+  if ($("removeSpaces").checked) {
+    return Array.from(normalized.replace(/[^\S\n]/gu, ""));
+  }
+
+  return Array.from(normalized);
 }
+
 function gridText(grid) {
   return grid.map(row => row.map(ch => ch || "　").join(" ")).join("\\n");
 }
