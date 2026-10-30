@@ -1,0 +1,14 @@
+*{box-sizing:border-box}body{margin:0;padding:28px 16px 48px;background:#f3f5fb;color:#202536;font-family:system-ui,"Yu Gothic UI",Meiryo,sans-serif}
+.app{width:min(900px,100%);margin:auto}header{margin-bottom:22px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;color:#6573a6}
+h1{font-size:clamp(25px,5vw,36px);margin:6px 0}header p,footer,.hint,#status{color:#697187}
+.panel{background:white;border:1px solid #e3e7f0;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 5px 20px #26345a0a}
+label{display:block;font-weight:700;margin-bottom:8px}textarea,select{width:100%;border:1px solid #d8deeb;border-radius:10px;padding:11px 12px;font:inherit;background:white;color:inherit}
+textarea{resize:vertical;line-height:1.6}.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.settings label{font-size:13px}
+.checks{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0}.check{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:500;margin:0}.check input{accent-color:#5869d8}
+.buttons{display:flex;flex-wrap:wrap;gap:9px}button{border:1px solid #d8deeb;border-radius:10px;background:white;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer;color:#30384f}
+button:hover{background:#f2f4fb}button.primary{color:white;background:#5869d8;border-color:#5869d8}button.primary:hover{background:#4859c6}
+.hint{font-size:12px;line-height:1.6;margin:12px 0 0}.result-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+h2{font-size:20px;margin:0 0 4px}#status{font-size:13px;margin:0}.result-wrap{overflow:auto;max-height:70vh;border-radius:12px;background:#f7f8fc;padding:14px}
+#resultText{display:inline-block;margin:0;white-space:pre;font-family:"Yu Gothic UI",Meiryo,monospace;line-height:1.55;font-size:18px}
+footer{text-align:center;font-size:12px;padding:8px}
+@media(max-width:620px){body{padding:16px 10px 30px}.panel{padding:15px}.settings{grid-template-columns:1fr}.result-heading{align-items:flex-start;flex-direction:column}}

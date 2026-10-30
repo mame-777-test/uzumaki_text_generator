@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>渦巻文字ジェネレーター</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main class="app">
+<header><div class="eyebrow">SPIRAL TEXT TOOL</div><h1>🌀 渦巻文字ジェネレーター</h1>
+<p>文章を渦巻き状に並べたり、元の文章に戻したりできます。</p></header>
+<section class="panel">
+<label for="sourceText">文章・渦巻き文字</label>
+<textarea id="sourceText" rows="4">縦読みで文章を書いてもAIに見破られてインプレゾンビが湧くなら渦巻き状に並べればさすがに人間しか読めずインプレゾンビ湧かない説。</textarea>
+<div class="settings">
+<div><label for="direction">回転方向</label><select id="direction"><option value="clockwise">時計回り</option><option value="counterclockwise">反時計回り</option></select></div>
+<div><label for="startCorner">開始位置</label><select id="startCorner"><option value="top-right">右上</option><option value="top-left">左上</option><option value="bottom-right">右下</option><option value="bottom-left">左下</option></select></div>
+<div><label for="cellSize">マスの大きさ</label><select id="cellSize"><option value="36">小</option><option value="44" selected>標準</option><option value="56">大</option></select></div>
+</div>
+<div class="checks"><label class="check"><input id="removeSpaces" type="checkbox" checked>空白・改行を取り除く</label><label class="check"><input id="showGrid" type="checkbox" checked>マス目を表示</label></div>
+<div class="buttons"><button id="encodeButton" class="primary">渦巻きに変換</button><button id="decodeButton">元の文章に戻す</button><button id="clearButton">クリア</button></div>
+<p class="hint">変換時は文字数に合わせた正方形のマス目を自動作成します。余ったマスは空欄です。</p>
+</section>
+<section class="panel"><div class="result-heading"><div><h2>変換結果</h2><p id="status" aria-live="polite">結果がここに表示されます。</p></div>
+<div class="buttons"><button id="copyButton">文字をコピー</button><button id="pngButton">PNGで保存</button></div></div>
+<div class="result-wrap"><pre id="resultText">ここに結果が表示されます。</pre></div></section>
+<footer>ブラウザだけで動作します。入力した文章は外部に送信されません。</footer>
+</main><script src="script.js"></script></body></html>
